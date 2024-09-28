@@ -8,10 +8,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<table><tr align="center">
-<td width="50" bgcolor="lightblue" bordercolor="black"><font size="10">Welcome to Employee Information System</font></td>
-</tr> 
-</table>
+<h3>
+Welcome to Employee Information System
+</h3>
 <h4>Please Enter Login Details</h4>
 <form:form action="LoginUser" method="post" modelAttribute="LoginForm">
             <table border="1">
@@ -27,6 +26,8 @@
                     <td colspan="2" align="center"><input type="submit" value="Login" /></td>
                 </tr>
             </table>
- </form:form>
+         </form:form>
+         
+          <h5><%=request.getAttribute("LoginError") %></h5>
 </body>
 </html>
