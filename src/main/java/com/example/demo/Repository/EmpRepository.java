@@ -43,6 +43,15 @@ public class EmpRepository {
 		session.close();
 	}
 	
+	public Employee findEmployeebyId(int Empid) {
+		Session session = factory.openSession();
+		Transaction transaction = session.beginTransaction();
+		Employee employee = session.find(Employee.class, Empid);
+		transaction.commit();
+		session.close();
+		return employee;
+	}
+	
 	public void saveEmployee(Employee employee)
 	{
 		Session session = factory.openSession();
